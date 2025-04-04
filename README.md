@@ -1,4 +1,4 @@
-Add# Spring Boot Kotlin User API
+# Spring Boot Kotlin User API
 
 A simple Spring Boot application with Kotlin that provides CRUD operations for User resources.
 
