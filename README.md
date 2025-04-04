@@ -1,47 +1,97 @@
-# Learn Kotlin
+Add# Spring Boot Kotlin User API
 
-A simple Kotlin project to help you get started with Kotlin programming.
+A simple Spring Boot application with Kotlin that provides CRUD operations for User resources.
 
-## Prerequisites
+## Features
 
-- JDK 17 or higher
-- Gradle
+- RESTful API for User management
+- In-memory storage
+- CRUD operations (Create, Read, Update, Delete)
+- Built with Spring Boot and Kotlin
 
 ## Project Structure
 
 ```
-learn-kotlin/
-├── src/
-│   ├── main/
-│   │   └── kotlin/
-│   │       └── com/
-│   │           └── example/
-│   │               └── Main.kt
-│   └── test/
-│       └── kotlin/
-│           └── com/
-│               └── example/
-└── build.gradle.kts
+src/main/kotlin/com/example/
+├── Application.kt           # Main application class
+├── controller/
+│   └── UserController.kt   # REST endpoints
+├── model/
+│   └── User.kt            # User data class
+├── repository/
+│   └── UserRepository.kt  # In-memory storage
+└── service/
+    └── UserService.kt     # Business logic
 ```
 
-## Running the Project
+## API Endpoints
 
-1. Open a terminal in the project directory
-2. Run the following command:
-   ```bash
-   ./gradlew run
-   ```
+### Get All Users
+```bash
+GET /api/users
+```
+Returns a list of all users.
 
-## Building the Project
+### Get User by ID
+```bash
+GET /api/users/{id}
+```
+Returns a specific user by ID.
 
-To build the project, run:
+### Create User
+```bash
+POST /api/users
+Content-Type: application/json
+
+{
+    "name": "John Doe"
+}
+```
+Creates a new user. The ID will be automatically generated.
+
+### Update User
+```bash
+PUT /api/users/{id}
+Content-Type: application/json
+
+{
+    "name": "Jane Doe"
+}
+```
+Updates an existing user.
+
+### Delete User
+```bash
+DELETE /api/users/{id}
+```
+Deletes a user by ID.
+
+## Getting Started
+
+### Prerequisites
+
+- Java 17 or later
+- Gradle
+
+### Running the Application
+
+1. Clone the repository
+2. Run the application:
+```bash
+./gradlew bootRun
+```
+
+The application will start on http://localhost:8080
+
+### Building the Application
+
 ```bash
 ./gradlew build
 ```
 
-## Testing
+## Technologies Used
 
-To run tests, use:
-```bash
-./gradlew test
-``` 
+- Spring Boot 3.2.3
+- Kotlin 1.9.22
+- Gradle
+- Jackson for JSON serialization 
