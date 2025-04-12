@@ -1,5 +1,6 @@
 rootProject.name = "learn-kotlin"
 include("spring:app")
+include("design-patterns:structural:facade")
 
 dependencyResolutionManagement {
     versionCatalogs {
