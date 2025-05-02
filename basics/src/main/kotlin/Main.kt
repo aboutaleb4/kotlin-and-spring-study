@@ -3,8 +3,6 @@ package org.example
 // Defining an extension Function
 fun Int.minusFive(): Int = this - 5;
 
-private var number: Int? = null;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
@@ -19,16 +17,16 @@ fun main() {
         println("i = $i")
     }
     
-    val int = 5;
+    // Using NumberOperations class
+    val numberOps = NumberOperations()
+    val int = 5
+    println(int.minusFive())
     
-    println(int.minusFive());
-    
-    
-    //LET
-    val x = number?.let { 
-        val number2 = it + 1
-        number2
-    } ?: 4
-    
-    println(x);
+    var number: Int? = null
+    val x = numberOps.processNullableNumber(number)
+    println(x)
+
+    // Using scope functions
+    println("\nScope Functions Examples:")
+    ScopeFunctions().demonstrateScopeFunctions()
 }
