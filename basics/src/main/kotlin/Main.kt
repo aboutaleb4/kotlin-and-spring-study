@@ -29,4 +29,6 @@ fun main() {
     // Using scope functions
     println("\nScope Functions Examples:")
     ScopeFunctions().demonstrateScopeFunctions()
+
+    println("Ahmed!!!")
 }
