@@ -18,6 +18,9 @@ build/
 *.ipr
 out/
 
+# VSCode/Cursor
+.vscode/
+
 # Eclipse
 .settings/
 .classpath
