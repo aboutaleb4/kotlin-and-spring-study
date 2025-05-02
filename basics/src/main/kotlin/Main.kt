@@ -28,7 +28,7 @@ fun main() {
     val x = number?.let { 
         val number2 = it + 1
         number2
-    } ?: 3
+    } ?: 4
     
     println(x);
 }
