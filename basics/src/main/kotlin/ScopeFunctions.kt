@@ -34,7 +34,7 @@ class ScopeFunctions {
             append(" ")
             append("World")
         }
-        println("apply result: ${applyResult.toString()}")
+        println("apply result: $applyResult")
         
         // 5. also example
         val alsoResult = "Kotlin".also {
