@@ -8,6 +8,7 @@ class ScopeFunctions {
             it?.plus(10) ?: 0
         }
         println("let result 1: $letResult")
+
         number = 5
         letResult = number.let {
             it?.plus(10) ?: 0
