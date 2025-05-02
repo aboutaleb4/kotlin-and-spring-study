@@ -1,13 +1,18 @@
 package org.example
 
 class ScopeFunctions {
+    var number: Int? = null
     fun demonstrateScopeFunctions() {
         // 1. let example
-        val letResult = "Hello".let {
-            println("let: Original string is $it")
-            it.length
+        var letResult = number.let {
+            it?.plus(10) ?: 0
         }
-        println("let result: $letResult")
+        println("let result 1: $letResult")
+        number = 5
+        letResult = number.let {
+            it?.plus(10) ?: 0
+        }
+        println("let result 2: $letResult")
         
         // 2. run example
         val runResult = "Kotlin".run {
