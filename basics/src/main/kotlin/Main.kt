@@ -51,9 +51,6 @@ fun main() {
     println("\nScope Functions Examples:")
     ScopeFunctions().demonstrateScopeFunctions()
 
-    println("Ahmed!!!")
-
-
     exploreVariables()
     exploreWhile()
     exploreDoWhile()

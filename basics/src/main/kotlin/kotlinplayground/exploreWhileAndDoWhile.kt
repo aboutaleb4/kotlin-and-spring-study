@@ -4,7 +4,7 @@ fun exploreWhile() {
     printlnInBlue("Explore While")
     var counter = 0
 
-    while (counter < 10) {
+    while (counter < 3) {
         println("Counter is $counter")
         counter++
     }
@@ -17,6 +17,6 @@ fun exploreDoWhile() {
     do {
         println("Counter is $counter")
         counter++
-    } while (counter < 10)
+    } while (counter < 5)
     println()
 }
