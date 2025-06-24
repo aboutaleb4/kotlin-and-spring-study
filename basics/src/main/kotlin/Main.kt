@@ -20,6 +20,7 @@ import com.kotlinplayground.exploreTopLevelVariables
 import com.kotlinplayground.exploreVariables
 import com.kotlinplayground.exploreVisibilityModifier
 import com.kotlinplayground.exploreWhile
+import org.kotlinplayground.exploreNullableType
 
 // Defining an extension Function
 fun Int.minusFive(): Int = this - 5;
@@ -72,4 +73,6 @@ fun main() {
     exploreCustomConstructorsAndInitFunctions()
     exploreVisibilityModifier()
     exploreCheckingAndCasting()
+    exploreNullableType()
 }
+
