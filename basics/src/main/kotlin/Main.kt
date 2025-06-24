@@ -1,5 +1,26 @@
 package org.example
 
+import com.kotlinplayground.exploreAccessModifiers
+import com.kotlinplayground.exploreAnnotationsInKotlin
+import com.kotlinplayground.exploreBreak
+import com.kotlinplayground.exploreCheckingAndCasting
+import com.kotlinplayground.exploreClassWithCompanionSection
+import com.kotlinplayground.exploreConflictingInterfaceFunctions
+import com.kotlinplayground.exploreCustomConstructorsAndInitFunctions
+import com.kotlinplayground.exploreDataClass
+import com.kotlinplayground.exploreDoWhile
+import com.kotlinplayground.exploreFunctionsWithOptionalParams
+import com.kotlinplayground.exploreInterfaces
+import com.kotlinplayground.exploreLabel
+import com.kotlinplayground.exploreMultipleConstructorsForClasses
+import com.kotlinplayground.exploreObjectClass
+import com.kotlinplayground.exploreOneLineFunctions
+import com.kotlinplayground.exploreOpenClass
+import com.kotlinplayground.exploreTopLevelVariables
+import com.kotlinplayground.exploreVariables
+import com.kotlinplayground.exploreVisibilityModifier
+import com.kotlinplayground.exploreWhile
+
 // Defining an extension Function
 fun Int.minusFive(): Int = this - 5;
 
@@ -31,4 +52,27 @@ fun main() {
     ScopeFunctions().demonstrateScopeFunctions()
 
     println("Ahmed!!!")
+
+
+    exploreVariables()
+    exploreWhile()
+    exploreDoWhile()
+    exploreBreak()
+    exploreLabel()
+    exploreLabel()
+    exploreOneLineFunctions()
+    exploreConflictingInterfaceFunctions()
+    exploreInterfaces()
+    exploreOpenClass()
+    exploreFunctionsWithOptionalParams()
+    exploreClassWithCompanionSection()
+    exploreAccessModifiers()
+    exploreTopLevelVariables()
+    exploreMultipleConstructorsForClasses()
+    exploreAnnotationsInKotlin()
+    exploreObjectClass()
+    exploreDataClass()
+    exploreCustomConstructorsAndInitFunctions()
+    exploreVisibilityModifier()
+    exploreCheckingAndCasting()
 }
