@@ -1,6 +1,4 @@
-package org.kotlinplayground
-
-import com.kotlinplayground.printlnInBlue
+package kotlinplayground
 
 fun exploreNullableType() {
     printlnInBlue("Explore Nullable Type")

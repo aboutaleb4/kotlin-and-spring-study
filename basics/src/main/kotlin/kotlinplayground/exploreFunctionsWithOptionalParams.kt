@@ -1,4 +1,4 @@
-package com.kotlinplayground
+package kotlinplayground
 
 fun exploreFunctionsWithOptionalParams() {
     printlnInBlue("Explore Functions With Optional Params")

@@ -1,4 +1,4 @@
-package com.kotlinplayground
+package kotlinplayground
 
 import anotherpackage.topLevelInt2
 

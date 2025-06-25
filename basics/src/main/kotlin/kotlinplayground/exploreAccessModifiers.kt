@@ -1,4 +1,4 @@
-package com.kotlinplayground
+package kotlinplayground
 
 fun exploreAccessModifiers() {
     printlnInBlue("Explore Access Modifiers")

@@ -1,4 +1,4 @@
-package com.kotlinplayground
+package kotlinplayground
 
 fun exploreOpenClass() {
     printlnInBlue("Explore Open Class")

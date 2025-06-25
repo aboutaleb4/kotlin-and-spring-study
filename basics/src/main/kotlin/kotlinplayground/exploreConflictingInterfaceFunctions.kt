@@ -1,4 +1,4 @@
-package com.kotlinplayground
+package kotlinplayground
 
 fun exploreConflictingInterfaceFunctions() {
     printlnInBlue("Explore Conflicting Interface Functions")

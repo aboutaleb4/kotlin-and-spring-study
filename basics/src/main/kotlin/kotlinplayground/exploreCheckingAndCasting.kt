@@ -1,4 +1,4 @@
-package com.kotlinplayground
+package kotlinplayground
 
 fun exploreCheckingAndCasting() {
     printlnInBlue("Explore Checking And Casting")

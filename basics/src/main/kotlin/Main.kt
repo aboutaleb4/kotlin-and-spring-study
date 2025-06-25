@@ -1,27 +1,27 @@
 package org.example
 
-import com.kotlinplayground.exploreAccessModifiers
-import com.kotlinplayground.exploreAnnotationsInKotlin
-import com.kotlinplayground.exploreBreak
-import com.kotlinplayground.exploreCheckingAndCasting
-import com.kotlinplayground.exploreClassWithCompanionSection
-import com.kotlinplayground.exploreConflictingInterfaceFunctions
-import com.kotlinplayground.exploreCustomConstructorsAndInitFunctions
-import com.kotlinplayground.exploreDataClass
-import com.kotlinplayground.exploreDoWhile
-import com.kotlinplayground.exploreFunctionsWithOptionalParams
-import com.kotlinplayground.exploreInterfaces
-import com.kotlinplayground.exploreLabel
-import com.kotlinplayground.exploreMultipleConstructorsForClasses
-import com.kotlinplayground.exploreObjectClass
-import com.kotlinplayground.exploreOneLineFunctions
-import com.kotlinplayground.exploreOpenClass
-import com.kotlinplayground.exploreTopLevelVariables
-import com.kotlinplayground.exploreVariables
-import com.kotlinplayground.exploreVisibilityModifier
-import com.kotlinplayground.exploreWhile
-import com.kotlinplayground.exploreLambdaExpressions
-import org.kotlinplayground.exploreNullableType
+import kotlinplayground.exploreAccessModifiers
+import kotlinplayground.exploreAnnotationsInKotlin
+import kotlinplayground.exploreBreak
+import kotlinplayground.exploreCheckingAndCasting
+import kotlinplayground.exploreClassWithCompanionSection
+import kotlinplayground.exploreConflictingInterfaceFunctions
+import kotlinplayground.exploreCustomConstructorsAndInitFunctions
+import kotlinplayground.exploreDataClass
+import kotlinplayground.exploreDoWhile
+import kotlinplayground.exploreFunctionsWithOptionalParams
+import kotlinplayground.exploreInterfaces
+import kotlinplayground.exploreLabel
+import kotlinplayground.exploreMultipleConstructorsForClasses
+import kotlinplayground.exploreObjectClass
+import kotlinplayground.exploreOneLineFunctions
+import kotlinplayground.exploreOpenClass
+import kotlinplayground.exploreTopLevelVariables
+import kotlinplayground.exploreVariables
+import kotlinplayground.exploreVisibilityModifier
+import kotlinplayground.exploreWhile
+import kotlinplayground.exploreLambdaExpressions
+import kotlinplayground.exploreNullableType
 
 // Defining an extension Function
 fun Int.minusFive(): Int = this - 5;

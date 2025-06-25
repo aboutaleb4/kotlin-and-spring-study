@@ -1,4 +1,4 @@
-package com.kotlinplayground
+package kotlinplayground
 
 fun exploreCustomConstructorsAndInitFunctions() {
     printlnInBlue("Explore Custom Constructors and Init Functions")
