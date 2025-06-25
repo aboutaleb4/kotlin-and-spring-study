@@ -22,6 +22,7 @@ import kotlinplayground.exploreVisibilityModifier
 import kotlinplayground.exploreWhile
 import kotlinplayground.exploreLambdaExpressions
 import kotlinplayground.exploreNullableType
+import kotlinplayground.printlnInBlue
 
 // Defining an extension Function
 fun Int.minusFive(): Int = this - 5;
@@ -76,5 +77,14 @@ fun main() {
     exploreCheckingAndCasting()
     exploreNullableType()
     exploreLambdaExpressions()
+    exploreCollectionsAndFilters()
+}
+
+fun exploreCollectionsAndFilters() {
+    printlnInBlue("Explore Collections And Filters")
+    val collectionToExplore = listOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val filteredCollection = collectionToExplore.filter { it % 3 == 0 }
+    println(filteredCollection)
+    println()
 }
 
