@@ -20,6 +20,7 @@ import com.kotlinplayground.exploreTopLevelVariables
 import com.kotlinplayground.exploreVariables
 import com.kotlinplayground.exploreVisibilityModifier
 import com.kotlinplayground.exploreWhile
+import com.kotlinplayground.exploreLambdaExpressions
 import org.kotlinplayground.exploreNullableType
 
 // Defining an extension Function
@@ -74,5 +75,6 @@ fun main() {
     exploreVisibilityModifier()
     exploreCheckingAndCasting()
     exploreNullableType()
+    exploreLambdaExpressions()
 }
 
