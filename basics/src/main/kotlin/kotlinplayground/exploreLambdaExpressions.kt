@@ -4,7 +4,7 @@ fun exploreLambdaExpressions() {
     printlnInBlue("Explore Lambda Expressions")
     val addLambda = {x: Int, y: Int -> x + y}
     println(addLambda(1, 6))
-    calculateAndPrint(4, 5, addLambda)
+    calculateAndPrint(4, 5) { x: Int, y: Int -> x + y }
     println()
 }
 
