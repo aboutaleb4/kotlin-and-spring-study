@@ -50,9 +50,6 @@ fun main() {
     val x = numberOps.processNullableNumber(number)
     println(x)
 
-    // Using scope functions
-    println("\nScope Functions Examples:")
-    exploreScopeFunctions()
     exploreVariables()
     exploreWhile()
     exploreDoWhile()
@@ -81,5 +78,6 @@ fun main() {
     exploreHashMaps()
     exploreSequences()
     exploreCollectionsNullablility()
+    exploreScopeFunctions()
 }
 

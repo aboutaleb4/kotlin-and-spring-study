@@ -2,6 +2,7 @@ package kotlinplayground
 
 var number: Int? = null
 fun exploreScopeFunctions() {
+    printlnInBlue("Explore Scope Functions")
     // 1. let example
     var letResult = number.let {
         it?.plus(10) ?: 0
@@ -41,4 +42,5 @@ fun exploreScopeFunctions() {
         println("also: Original string is $it")
     }
     println("Also result: $alsoResult\n")
+    println()
 }
