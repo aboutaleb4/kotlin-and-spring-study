@@ -23,5 +23,8 @@ private fun filterBasedOn(isDivisibleByThree: (Int) -> Boolean) {
     print("Mapped Collection: ")
     println(mapped)
 
+    //Combining
+    originalCollection.filter { isDivisibleByThree.invoke(it) }.map { it.toDouble() }.forEach(::println)
+
     println()
 }
