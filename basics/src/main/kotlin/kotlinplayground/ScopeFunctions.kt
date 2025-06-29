@@ -1,7 +1,11 @@
 package kotlinplayground
 
 var number: Int? = null
+
 fun exploreScopeFunctions() {
+    /*
+    * Execute a Piece of Code within the context of an object.
+    * */
     printlnInBlue("Explore Scope Functions")
     // 1. let example
     var letResult = number.let {
