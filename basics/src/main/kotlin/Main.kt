@@ -26,6 +26,7 @@ import kotlinplayground.exploreCollectionsAndFilters
 import kotlinplayground.exploreExtensionFunctions
 import kotlinplayground.exploreHashMaps
 import kotlinplayground.exploreSequences
+import kotlinplayground.exploreCollectionsNullablility
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -79,5 +80,6 @@ fun main() {
     exploreExtensionFunctions()
     exploreHashMaps()
     exploreSequences()
+    exploreCollectionsNullablility()
 }
 
