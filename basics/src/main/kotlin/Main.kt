@@ -24,9 +24,6 @@ import kotlinplayground.exploreLambdaExpressions
 import kotlinplayground.exploreNullableType
 import kotlinplayground.exploreCollectionsAndFilters
 
-// Defining an extension Function
-fun Int.minusFive(): Int = this - 5;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
@@ -43,9 +40,7 @@ fun main() {
     
     // Using NumberOperations class
     val numberOps = NumberOperations()
-    val int = 5
-    println(int.minusFive())
-    
+
     var number: Int? = null
     val x = numberOps.processNullableNumber(number)
     println(x)
@@ -78,5 +73,6 @@ fun main() {
     exploreNullableType()
     exploreLambdaExpressions()
     exploreCollectionsAndFilters()
+    exploreExtensionFunctions()
 }
 
