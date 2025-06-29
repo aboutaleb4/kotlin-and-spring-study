@@ -46,5 +46,10 @@ fun exploreScopeFunctions() {
         println("also: Original string is $it")
     }
     println("Also result: $alsoResult\n")
-    println()
+
+    User(0, "Ahmed").apply { age = 5 }.also { println(it) }
+}
+
+data class User(var id: Int, var name: String, var age: Int = 0) {
+
 }
