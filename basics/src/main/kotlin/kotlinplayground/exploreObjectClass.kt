@@ -1,4 +1,4 @@
-package com.example.kotlinplayground
+package org.example.kotlinplayground
 
 object ObjectClass {
     var name = "Default Name"

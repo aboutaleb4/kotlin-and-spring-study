@@ -1,6 +1,6 @@
-package com.example.kotlinplayground
+package org.example.kotlinplayground
 
-import anotherpackage.topLevelInt2
+import org.example.anotherpackage.topLevelInt2
 
 const val topLevelInt = 5
 

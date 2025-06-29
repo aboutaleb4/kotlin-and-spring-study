@@ -1,4 +1,4 @@
-package com.example.kotlinplayground
+package org.example.kotlinplayground
 
 fun exploreClassWithCompanionSection() {
     printlnInBlue("Explore ClassWith Companion Section")
