@@ -1,4 +1,4 @@
-package kotlinplayground
+package com.example.kotlinplayground
 
 fun exploreOneLineFunctions() {
     printlnInBlue("Explore One Line Functions")

@@ -1,4 +1,4 @@
-package kotlinplayground
+package com.example.kotlinplayground
 
 // Defining an extension Function
 fun Int.minusFive(): Int = this - 5;

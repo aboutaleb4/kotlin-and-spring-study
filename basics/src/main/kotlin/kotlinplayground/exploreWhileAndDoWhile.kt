@@ -1,4 +1,4 @@
-package kotlinplayground
+package com.example.kotlinplayground
 
 fun exploreWhile() {
     printlnInBlue("Explore While")

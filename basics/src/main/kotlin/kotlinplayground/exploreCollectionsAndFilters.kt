@@ -1,4 +1,4 @@
-package kotlinplayground
+package com.example.kotlinplayground
 
 fun exploreCollectionsAndFilters() {
     filterBasedOn { x: Int -> x % 3 == 0 }

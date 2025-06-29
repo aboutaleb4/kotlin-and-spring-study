@@ -1,4 +1,4 @@
-package kotlinplayground
+package com.example.kotlinplayground
 
 fun exploreLambdaExpressions() {
     printlnInBlue("Explore Lambda Expressions")

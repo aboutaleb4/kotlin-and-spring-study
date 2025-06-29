@@ -1,4 +1,4 @@
-package kotlinplayground
+package com.example.kotlinplayground
 
 fun exploreBreak() {
     printlnInBlue("Explore Break")

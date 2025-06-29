@@ -1,4 +1,4 @@
-package kotlinplayground
+package com.example.kotlinplayground
 
 val RESET = "\u001B[0m"      // Resets all colors and formatting
 val BLUE = "\u001B[34m"      // Blue text

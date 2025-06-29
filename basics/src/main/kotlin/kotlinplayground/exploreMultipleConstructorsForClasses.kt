@@ -1,4 +1,4 @@
-package kotlinplayground
+package com.example.kotlinplayground
 
 fun exploreMultipleConstructorsForClasses() {
     printlnInBlue("Explore Multiple Constructors For Classes")

@@ -1,4 +1,4 @@
-package kotlinplayground
+package com.example.kotlinplayground
 
 import com.javaannotation.SimpleJavaAnnotation
 

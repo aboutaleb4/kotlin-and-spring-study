@@ -1,4 +1,4 @@
-package kotlinplayground
+package com.example.kotlinplayground
 
 fun exploreVisibilityModifier() {
     printlnInBlue("Explore Explore Visibility Modifier")
