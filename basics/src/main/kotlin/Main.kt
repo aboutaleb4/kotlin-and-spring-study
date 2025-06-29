@@ -27,6 +27,7 @@ import kotlinplayground.exploreExtensionFunctions
 import kotlinplayground.exploreHashMaps
 import kotlinplayground.exploreSequences
 import kotlinplayground.exploreCollectionsNullablility
+import kotlinplayground.exploreScopeFunctions
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -51,8 +52,7 @@ fun main() {
 
     // Using scope functions
     println("\nScope Functions Examples:")
-    ScopeFunctions().demonstrateScopeFunctions()
-
+    exploreScopeFunctions()
     exploreVariables()
     exploreWhile()
     exploreDoWhile()
