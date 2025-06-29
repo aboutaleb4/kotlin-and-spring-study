@@ -1,32 +1,14 @@
 package com.example.repository
 
 import com.example.model.User
+import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
-import java.util.concurrent.ConcurrentHashMap
-import java.util.concurrent.atomic.AtomicLong
 
+// By extending JpaRepository, Spring Data JPA automatically provides
+// implementations for common CRUD operations (save, findById, findAll, deleteById, etc.)
 @Repository
-class UserRepository {
-    private val users = ConcurrentHashMap<Long, User>()
-    private val idCounter = AtomicLong(1)
-
-    fun findAll(): List<User> = users.values.toList()
-
-    fun findById(id: Long): User? = users[id]
-
-    fun save(user: User): User {
-        val id = user.id ?: idCounter.getAndIncrement()
-        val newUser = user.copy(id = id)
-        users[id] = newUser
-        return newUser
-    }
-
-    fun update(id: Long, user: User): User? {
-        if (!users.containsKey(id)) return null
-        val updatedUser = user.copy(id = id)
-        users[id] = updatedUser
-        return updatedUser
-    }
-
-    fun deleteById(id: Long): Boolean = users.remove(id) != null
-} 
+interface UserRepository : JpaRepository<User, Long> {
+    // You can add custom query methods here if needed, e.g.:
+    // fun findByName(name: String): List<User>
+    // fun findByAgeGreaterThan(age: Int): List<User>
+}
