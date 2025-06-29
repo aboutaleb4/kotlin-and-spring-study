@@ -41,7 +41,7 @@ fun main() {
     // Using NumberOperations class
     val numberOps = NumberOperations()
 
-    var number: Int? = null
+    val number: Int? = null
     val x = numberOps.processNullableNumber(number)
     println(x)
 
