@@ -6,10 +6,22 @@ fun exploreCollectionsAndFilters() {
 
 private fun filterBasedOn(isDivisibleByThree: (Int) -> Boolean) {
     printlnInBlue("Explore Collections And Filters")
-    val collectionToExplore = listOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    val filteredCollection = collectionToExplore.filter {
+
+    val originalCollection = listOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    print("Original Collection: ")
+    println(originalCollection)
+
+    val filteredCollection = originalCollection.filter {
         isDivisibleByThree.invoke(it)
     }
+    print("Filtered Collection: ")
     println(filteredCollection)
+
+    val mapped = originalCollection.map {
+        it.toDouble()
+    }
+    print("Mapped Collection: ")
+    println(mapped)
+
     println()
 }
