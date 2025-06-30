@@ -7,6 +7,7 @@ rootProject.name = "learn-kotlin"
 include("spring:app")
 include("design-patterns:structural:facade")
 include("basics")
+include("course-catalog-service")
 
 dependencyResolutionManagement {
     versionCatalogs {
@@ -15,3 +16,4 @@ dependencyResolutionManagement {
         }
     }
 }
+
