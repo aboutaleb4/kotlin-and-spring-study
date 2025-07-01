@@ -16,6 +16,7 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
     testImplementation(kotlin("test"))
 }
 
