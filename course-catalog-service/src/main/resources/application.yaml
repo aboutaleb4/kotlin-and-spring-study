@@ -1,4 +1,4 @@
-spring:
+spring: #Default is called if we don't set the profile to prod or nonprod
   application:
     name: course-catalog-service
 message: Hello from default profile
