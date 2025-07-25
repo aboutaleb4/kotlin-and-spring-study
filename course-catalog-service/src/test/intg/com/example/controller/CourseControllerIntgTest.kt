@@ -1,9 +1,11 @@
 package com.example.controller
 
 import com.example.dto.CourseDTO
+import com.example.entity.Course
 import com.example.repository.CourseRepository
 import courseEntityList
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,4 +68,26 @@ class CourseControllerIntgTest {
         }
     }
 
+    @Test
+    fun updateCourse() {
+        val courseEntity = Course(
+            null,
+            "Apache Kafka for Developers using Spring Boot", "Development"
+        )
+        courseRepository.save(courseEntity)
+        val updatedCourseEntity = Course(null,
+            "Apache Kafka for Developers using Spring Boot1", "Development" )
+
+        val updatedCourseDTO = webTestClient
+            .put()
+            .uri("/v1/courses/{courseId}", courseEntity.id)
+            .bodyValue(updatedCourseEntity)
+            .exchange()
+            .expectStatus().isOk
+            .expectBody(CourseDTO::class.java)
+            .returnResult()
+            .responseBody
+
+        assertEquals("Apache Kafka for Developers using Spring Boot1", updatedCourseDTO?.name)
+    }
 }
