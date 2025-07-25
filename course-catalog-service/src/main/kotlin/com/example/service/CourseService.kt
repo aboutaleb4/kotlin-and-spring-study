@@ -41,4 +41,16 @@ class CourseService( val courseRepository: CourseRepository) {
             throw CourseNotFoundException("Course $courseId not found")
         }
     }
+
+    fun deleteCourse(courseId: Int) {
+        val existingCourse = courseRepository.findById(courseId)
+
+        return if (existingCourse.isPresent) {
+            courseRepository.deleteById(courseId)
+        }
+        else {
+            throw CourseNotFoundException("Course $courseId not found")
+        }
+
+    }
 }
