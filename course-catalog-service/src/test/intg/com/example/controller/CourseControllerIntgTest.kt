@@ -1,7 +1,10 @@
 package com.example.controller
 
 import com.example.dto.CourseDTO
+import com.example.repository.CourseRepository
+import courseEntityList
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
@@ -17,6 +20,15 @@ class CourseControllerIntgTest {
 
     @Autowired
     lateinit var webTestClient: WebTestClient
+
+    @Autowired
+    lateinit var courseRepository: CourseRepository
+
+    @BeforeEach
+    fun setUp() {
+        courseRepository.deleteAll()
+        courseRepository.saveAll(courseEntityList())
+    }
 
     @Test
     fun addCourse() {
@@ -34,6 +46,24 @@ class CourseControllerIntgTest {
         Assertions.assertTrue {
             responseBody!!.id != null
         }
-
     }
+
+    @Test
+    fun retrieveAllCourses() {
+        val courseDto = CourseDTO(null, "Math", "Science")
+
+        val responseBody = webTestClient.get()
+            .uri("v1/courses")
+            .exchange()
+            .expectStatus().isOk
+            .expectBodyList(CourseDTO::class.java)
+            .returnResult()
+            .responseBody
+
+        println(responseBody)
+        Assertions.assertTrue {
+            responseBody!!.size == 3
+        }
+    }
+
 }
