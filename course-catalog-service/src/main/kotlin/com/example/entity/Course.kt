@@ -7,9 +7,9 @@ import jakarta.persistence.*
 data class Course (
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Int?,
-    val name: String,
-    val category: String,
+    var id: Int?,
+    var name: String,
+    var category: String,
 ){
     constructor() : this(null, "", "")
 }

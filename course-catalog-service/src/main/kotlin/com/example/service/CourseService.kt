@@ -2,6 +2,7 @@ package com.example.service
 
 import com.example.dto.CourseDTO
 import com.example.entity.Course
+import com.example.exceptions.CourseNotFoundException
 import com.example.repository.CourseRepository
 import org.springframework.stereotype.Service
 
@@ -22,6 +23,22 @@ class CourseService( val courseRepository: CourseRepository) {
     fun getAll(): List<CourseDTO> {
         return courseRepository.findAll().map {
             CourseDTO(it.id, it.name, it.category)
+        }
+    }
+
+    fun updateCourse(courseId: Int, courseDTO: CourseDTO): CourseDTO {
+        val existingCourse = courseRepository.findById(courseId)
+
+        return if (existingCourse.isPresent) {
+            existingCourse.get().let {
+                it.name = courseDTO.name
+                it.category = courseDTO.category
+                courseRepository.save(it)
+                CourseDTO(it.id, it.name, it.category)
+            }
+        }
+        else {
+            throw CourseNotFoundException("Course $courseId not found")
         }
     }
 }
