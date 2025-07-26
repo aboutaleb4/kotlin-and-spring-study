@@ -5,6 +5,7 @@ import com.example.service.CourseService
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.every
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient
@@ -59,5 +60,28 @@ class CoursesControllerUnitTes {
             responseBody!!.size == 3
         }
     }
+
+    @Test
+    fun updateCourse() {
+        val courseDTO = CourseDTO(1,
+            "Apache Kafka for Developers using Spring Boot1", "Development" )
+
+        every { coursesServiceMock.updateCourse(any(), any()) }
+            .returns( courseDTO)
+
+
+        val updatedCourseDTO = webTestClient
+            .put()
+            .uri("/v1/courses/{courseId}", courseDTO.id)
+            .bodyValue(courseDTO)
+            .exchange()
+            .expectStatus().isOk
+            .expectBody(CourseDTO::class.java)
+            .returnResult()
+            .responseBody
+
+        assertEquals("Apache Kafka for Developers using Spring Boot1", updatedCourseDTO?.name)
+    }
+
 
 }
