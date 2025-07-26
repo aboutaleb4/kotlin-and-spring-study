@@ -27,6 +27,7 @@ import org.example.kotlinplayground.exploreExtensionFunctions
 import org.example.kotlinplayground.exploreHashMaps
 import org.example.kotlinplayground.exploreSequences
 import org.example.kotlinplayground.exploreCollectionsNullablility
+import org.example.kotlinplayground.exploreCoroutines
 import org.example.kotlinplayground.exploreScopeFunctions
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -79,5 +80,6 @@ fun main() {
     exploreSequences()
     exploreCollectionsNullablility()
     exploreScopeFunctions()
+    exploreCoroutines()
 }
 
