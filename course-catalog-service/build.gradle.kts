@@ -36,6 +36,7 @@ dependencies {
     //logging
     implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
 
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
 
     //db
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")

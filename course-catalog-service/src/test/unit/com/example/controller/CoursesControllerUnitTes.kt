@@ -25,7 +25,7 @@ class CoursesControllerUnitTes {
     lateinit var coursesServiceMock: CourseService
 
     @Test
-    fun retrieveGreeting() {
+    fun addCourse() {
         every { coursesServiceMock.addCourse(any()) }.returns(courseDTO(id = 1))
 
         val responseBody = webTestClient.post()
@@ -83,5 +83,21 @@ class CoursesControllerUnitTes {
         assertEquals("Apache Kafka for Developers using Spring Boot1", updatedCourseDTO?.name)
     }
 
+    @Test
+    fun addCourse_validation() {
+        every { coursesServiceMock.addCourse(any()) }.returns(courseDTO(id = 1))
+
+        val responseBody = webTestClient.post()
+            .uri("/v1/courses")
+            .bodyValue(CourseDTO(null, "", ""))
+            .exchange()
+            .expectStatus().isBadRequest
+            .expectBody(String::class.java)
+            .returnResult()
+            .responseBody
+
+//        assertEquals("courseDTO.category must not be blank, courseDTO.name must not be blank"
+//            , responseBody)
+    }
 
 }
