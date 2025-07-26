@@ -4,8 +4,8 @@ import jakarta.validation.constraints.NotBlank
 
 data class CourseDTO (
     var id: Int?,
-    @get: NotBlank(message = "Name cannot be empty")
+    @get: NotBlank(message = "courseDTO.name must not be blank")
     var name: String,
-    @get: NotBlank(message = "Category cannot be empty")
+    @get: NotBlank(message = "courseDTO.category must not be blank")
     var category: String,
 )

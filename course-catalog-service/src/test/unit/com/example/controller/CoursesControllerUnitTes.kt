@@ -96,8 +96,8 @@ class CoursesControllerUnitTes {
             .returnResult()
             .responseBody
 
-//        assertEquals("courseDTO.category must not be blank, courseDTO.name must not be blank"
-//            , responseBody)
+        assertEquals("courseDTO.category must not be blank,courseDTO.name must not be blank"
+            , responseBody)
     }
 
 }
