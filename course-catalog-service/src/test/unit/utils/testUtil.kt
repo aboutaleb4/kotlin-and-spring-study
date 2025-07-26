@@ -1,3 +1,6 @@
+package utils
+
+import com.example.dto.CourseDTO
 import com.example.entity.Course
 
 fun courseEntityList() = listOf(
@@ -11,4 +14,14 @@ fun courseEntityList() = listOf(
         null,
         "Wiremock for Java Developers", "Development",
     )
+)
+
+fun courseDTO(
+    id: Int? = null,
+    name: String = "Build RestFul APis using Spring Boot and Kotlin",
+    category: String = "Development",
+) = CourseDTO(
+    id,
+    name,
+    category
 )

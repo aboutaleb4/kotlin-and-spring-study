@@ -3,7 +3,7 @@ package com.example.controller
 import com.example.dto.CourseDTO
 import com.example.entity.Course
 import com.example.repository.CourseRepository
-import courseEntityList
+import utils.courseEntityList
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
