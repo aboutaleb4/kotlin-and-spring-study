@@ -11,6 +11,7 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.test.web.reactive.server.WebTestClient
 import utils.courseDTO
+import utils.courseEntityList
 
 @WebMvcTest(controllers = [CourseController::class])
 @AutoConfigureWebTestClient
@@ -39,4 +40,24 @@ class CoursesControllerUnitTes {
             responseBody!!.id != null
         }
     }
+
+    @Test
+    fun retrieveAllCourses() {
+        every { coursesServiceMock.getAll() }
+            .returns(courseEntityList().map { CourseDTO(it.id, it.name, it.category) })
+
+        val responseBody = webTestClient.get()
+            .uri("/v1/courses")
+            .exchange()
+            .expectStatus().isOk
+            .expectBodyList(CourseDTO::class.java)
+            .returnResult()
+            .responseBody
+
+        println(responseBody)
+        Assertions.assertTrue {
+            responseBody!!.size == 3
+        }
+    }
+
 }

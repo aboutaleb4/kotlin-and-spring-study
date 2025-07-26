@@ -52,8 +52,6 @@ class CourseControllerIntgTest {
 
     @Test
     fun retrieveAllCourses() {
-        val courseDto = CourseDTO(null, "Math", "Science")
-
         val responseBody = webTestClient.get()
             .uri("v1/courses")
             .exchange()
