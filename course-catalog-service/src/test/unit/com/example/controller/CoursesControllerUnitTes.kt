@@ -100,4 +100,22 @@ class CoursesControllerUnitTes {
             , responseBody)
     }
 
+    @Test
+    fun addCourse_runtimeException() {
+        val message = "Random Exception"
+        every { coursesServiceMock.addCourse(any()) } throws RuntimeException(message)
+
+        val responseBody = webTestClient.post()
+            .uri("/v1/courses")
+            .bodyValue(CourseDTO(null, "name", "category"))
+            .exchange()
+            .expectStatus().is5xxServerError
+            .expectBody(String::class.java)
+            .returnResult()
+            .responseBody
+
+        assertEquals(message, responseBody)
+    }
+
+
 }
