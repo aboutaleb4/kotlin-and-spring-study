@@ -20,7 +20,7 @@ class CourseService( val courseRepository: CourseRepository) {
         }
     }
 
-    fun getAll(): List<CourseDTO> {
+    fun getAllCourses(): List<CourseDTO> {
         return courseRepository.findAll().map {
             CourseDTO(it.id, it.name, it.category)
         }

@@ -44,7 +44,7 @@ class CoursesControllerUnitTes {
 
     @Test
     fun retrieveAllCourses() {
-        every { coursesServiceMock.getAll() }
+        every { coursesServiceMock.getAllCourses() }
             .returns(courseEntityList().map { CourseDTO(it.id, it.name, it.category) })
 
         val responseBody = webTestClient.get()
