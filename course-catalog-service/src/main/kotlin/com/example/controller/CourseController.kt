@@ -3,6 +3,7 @@ package com.example.controller
 import com.example.dto.CourseDTO
 import com.example.service.CourseService
 import jakarta.validation.Valid
+import kotlinx.coroutines.flow.toList
 import org.springframework.http.HttpStatus
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.DeleteMapping
@@ -27,7 +28,7 @@ class CourseController(val courseService: CourseService) {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    fun retrieveAllCourses(): List<CourseDTO> = courseService.getAllCourses()
+    suspend fun retrieveAllCourses(): List<CourseDTO> = courseService.getAllCourses().toList()
 
     @PutMapping("/{course_id}")
     @ResponseStatus(HttpStatus.OK)

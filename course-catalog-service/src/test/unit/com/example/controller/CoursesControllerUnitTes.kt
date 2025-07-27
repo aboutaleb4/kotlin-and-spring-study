@@ -3,7 +3,9 @@ package com.example.controller
 import com.example.dto.CourseDTO
 import com.example.service.CourseService
 import com.ninjasquad.springmockk.MockkBean
+import io.mockk.coEvery
 import io.mockk.every
+import kotlinx.coroutines.flow.asFlow // Import this for List.asFlow()
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
@@ -44,8 +46,8 @@ class CoursesControllerUnitTes {
 
     @Test
     fun retrieveAllCourses() {
-        every { coursesServiceMock.getAllCourses() }
-            .returns(courseEntityList().map { CourseDTO(it.id, it.name, it.category) })
+        coEvery { coursesServiceMock.getAllCourses() }
+            .returns(courseEntityList().map { CourseDTO(it.id, it.name, it.category) }.asFlow())
 
         val responseBody = webTestClient.get()
             .uri("/v1/courses")
@@ -116,6 +118,4 @@ class CoursesControllerUnitTes {
 
         assertEquals(message, responseBody)
     }
-
-
 }

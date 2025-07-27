@@ -5,6 +5,8 @@ import com.example.entity.Course
 import com.example.exceptions.CourseNotFoundException
 import com.example.repository.CourseRepository
 import org.springframework.stereotype.Service
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.asFlow
 
 @Service
 class CourseService( val courseRepository: CourseRepository) {
@@ -20,10 +22,10 @@ class CourseService( val courseRepository: CourseRepository) {
         }
     }
 
-    fun getAllCourses(): List<CourseDTO> {
+    suspend fun getAllCourses(): Flow<CourseDTO> {
         return courseRepository.findAll().map {
             CourseDTO(it.id, it.name, it.category)
-        }
+        }.asFlow()
     }
 
     fun updateCourse(courseId: Int, courseDTO: CourseDTO): CourseDTO {

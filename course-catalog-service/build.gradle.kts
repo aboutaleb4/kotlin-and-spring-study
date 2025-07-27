@@ -40,6 +40,15 @@ dependencies {
 
     //db
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+
+    // For tests:
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
+
     runtimeOnly("com.h2database:h2")
 //    runtimeOnly("org.postgresql:postgresql")
 
