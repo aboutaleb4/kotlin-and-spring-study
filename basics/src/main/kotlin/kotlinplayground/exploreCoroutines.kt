@@ -16,6 +16,9 @@ fun exploreCoroutines() { // This is a regular non-suspend function
     println()
 }
 
+/**
+ * Importantly, suspend functions can only be called from other suspend functions or from within a coroutine builder (which we'll look at next).
+ */
 suspend fun fetchDataFromNetwork(): String {
     // Imagine this takes time, like calling an external API
     delay(2000) // This is a suspend function from kotlinx.coroutines, it doesn't block the thread
