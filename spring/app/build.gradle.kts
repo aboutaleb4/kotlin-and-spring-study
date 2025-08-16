@@ -30,6 +30,9 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("com.h2database:h2")
 
+    // Spring Cloud dependencies
+    implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
+
     // Use JUnit Jupiter for testing.
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.2")
@@ -42,6 +45,12 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+}
+
+dependencyManagement {
+    imports {
+        mavenBom( "org.springframework.cloud:spring-cloud-dependencies:2023.0.1")
+    }
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
