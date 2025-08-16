@@ -3,7 +3,7 @@ plugins {
     kotlin("jvm") version "1.9.22" apply false
 }
 
-rootProject.name = "learn-kotlin"
+rootProject.name = "kotlin-and-spring-study"
 include("spring:app")
 include("design-patterns:structural:facade")
 include("basics")
