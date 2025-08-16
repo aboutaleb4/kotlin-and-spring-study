@@ -1,0 +1,18 @@
+server:
+  port: 8084
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: limit_route
+          uri: https://httpbin.org
+          predicates:
+            - Path=/anything/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                key-resolver: "#{@clientKeyResolver}"
+                redis-rate-limiter.replenishRate: 1    # 1 token per second
+                redis-rate-limiter.burstCapacity: 5   # max tokens
+                requestedTokens: 2                     # each request consumes 2 tokens

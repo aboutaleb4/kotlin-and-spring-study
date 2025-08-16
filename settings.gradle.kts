@@ -9,6 +9,7 @@ include("design-patterns:structural:facade")
 include("basics")
 include("course-catalog-service")
 include("spring-cloud-demos")
+include("api-gateway-demo")
 
 // Included the projects that are already part of my codebase.
 // Does the codebase necessarily have to have all of them?
