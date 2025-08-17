@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  spring-app:
+    build:
+      context: ./spring/app
+      dockerfile: Dockerfile
+    container_name: spring-app
+    ports:
+      - "8086:8086"
+
+  api-gateway-demo:
+    build:
+      context: ./api-gateway-demo
+      dockerfile: Dockerfile
+    container_name: api-gateway-demo
+    ports:
+      - "8084:8084"
+    depends_on:
+      - spring-app
+      - course-catalog-service
+      - spring-cloud-demos
+
+  spring-cloud-demos:
+    build:
+      context: ./spring-cloud-demos
+      dockerfile: Dockerfile
+    container_name: spring-cloud-demos
+    ports:
+      - "8082:8082"
+
+  course-catalog-service:
+    build:
+      context: ./course-catalog-service
+      dockerfile: Dockerfile
+    container_name: course-catalog-service
+    ports:
+      - "8080:8080"
