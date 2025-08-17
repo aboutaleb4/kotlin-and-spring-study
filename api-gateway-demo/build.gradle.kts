@@ -43,5 +43,5 @@ java {
 }
 
 application {
-    mainClass = "com.example.ApplicationKt"
+    mainClass = "com.example.ApiGatewayApplicationKt"
 }
