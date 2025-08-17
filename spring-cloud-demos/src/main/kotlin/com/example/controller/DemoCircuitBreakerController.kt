@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate
 class DemoCircuitBreakerController {
 
     private val restTemplate = RestTemplate()
-    private val externalServiceUrl = "http://localhost:8081/unstable-api" // URL of a fake unstable service
+    private val externalServiceUrl = "http://localhost:8084/anything/test?client=user1" // URL of a fake unstable service
 
     @GetMapping("/resilient-endpoint")
     @CircuitBreaker(name = "myService", fallbackMethod = "fallbackForExternalService")
