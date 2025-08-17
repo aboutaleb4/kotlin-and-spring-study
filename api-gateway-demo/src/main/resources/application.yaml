@@ -16,3 +16,7 @@ spring:
                 redis-rate-limiter.replenishRate: 1    # 1 token per second
                 redis-rate-limiter.burstCapacity: 5   # max tokens
                 requestedTokens: 2                     # each request consumes 2 tokens
+  data:
+    redis:
+      host: redis
+      port: 6379

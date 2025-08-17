@@ -20,6 +20,10 @@ services:
       - spring-app
       - course-catalog-service
       - spring-cloud-demos
+      - redis
+    environment:
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_PORT=6379
 
   spring-cloud-demos:
     build:
@@ -36,3 +40,9 @@ services:
     container_name: course-catalog-service
     ports:
       - "8080:8080"
+
+  redis:
+    image: redis:7.4-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
