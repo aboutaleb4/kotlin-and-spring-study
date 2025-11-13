@@ -10,6 +10,8 @@ include("basics")
 include("course-catalog-service")
 include("spring-cloud-demos")
 include("api-gateway-demo")
+include("library-testing:some-implementer")
+include("library-testing:some-sdk")
 
 // Included the projects that are already part of my codebase.
 // Does the codebase necessarily have to have all of them?

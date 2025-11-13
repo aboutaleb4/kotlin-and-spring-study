@@ -12,6 +12,8 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
+    implementation(project(":library-testing:some-implementer"))
+    implementation(project(":library-testing:some-sdk"))
 }
 
 tasks.test {
