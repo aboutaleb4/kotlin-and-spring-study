@@ -1,5 +1,5 @@
 package com.some.sdk
 
 class SomeRequest {
-    val someString: String = ""
+    val someString: String = "some string"
 }
