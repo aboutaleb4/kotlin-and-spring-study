@@ -1,5 +1,6 @@
 package org.example
 
+import com.some.implementer.SomeImplementation
 import org.example.kotlinplayground.exploreAccessModifiers
 import org.example.kotlinplayground.exploreAnnotationsInKotlin
 import org.example.kotlinplayground.exploreBreak
@@ -82,6 +83,6 @@ fun main() {
     exploreCollectionsNullablility()
     exploreScopeFunctions()
     exploreCoroutines()
-    exploreLibraries()
+    exploreLibraries(SomeImplementation())
 }
 

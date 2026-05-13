@@ -5,6 +5,6 @@ import com.some.sdk.SomeRequest
 
 class SomeImplementation: SomeInterface {
     override fun someMethod(someRequest: SomeRequest) {
-        println("some implementation")
+        println("some implementation changed again: ${someRequest.someString}")
     }
 }
