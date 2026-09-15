@@ -10,10 +10,6 @@ repositories {
     mavenCentral()
 }
 
-kotlin {
-    jvmToolchain(21)
-}
-
 publishing {
     publications {
         create<MavenPublication>("main") {

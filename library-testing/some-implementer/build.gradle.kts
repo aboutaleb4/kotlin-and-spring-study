@@ -15,10 +15,6 @@ dependencies {
     implementation("com.some.sdk:some-sdk:0.0.1-SNAPSHOT")
 }
 
-kotlin {
-    jvmToolchain(21)
-}
-
 publishing {
     publications {
         create<MavenPublication>("main") {
