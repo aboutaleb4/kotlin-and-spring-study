@@ -1,6 +1,6 @@
 package com.example.controller
 
-import com.example.graphqldemo.model.Book
+import com.example.model.Book
 import org.springframework.graphql.data.method.annotation.QueryMapping
 import org.springframework.stereotype.Controller
 
