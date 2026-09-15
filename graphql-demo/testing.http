@@ -1,0 +1,12 @@
+@baseUrl=localhost
+
+###
+GRAPHQL http://{{baseUrl}}:8080/graphql
+
+query {
+  books {
+    id
+    title
+    author
+  }
+}
