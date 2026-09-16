@@ -9,4 +9,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface SimpleJavaAnnotation {
     String value() default "default"; // A single optional parameter
+    int value2() default 0;
 }
